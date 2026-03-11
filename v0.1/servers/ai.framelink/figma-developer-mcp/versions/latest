@@ -1,0 +1,41 @@
+{
+  "server": {
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "ai.framelink/figma-developer-mcp",
+    "title": "Framelink MCP for Figma",
+    "description": "Give your coding agent access to Figma data - implement designs in one-shot.",
+    "version": "0.6.6",
+    "repository": {
+      "url": "https://github.com/GLips/Figma-Context-MCP",
+      "source": "github"
+    },
+    "websiteUrl": "https://www.framelink.ai",
+    "packages": [
+      {
+        "registryType": "npm",
+        "identifier": "figma-developer-mcp",
+        "version": "0.6.6",
+        "runtimeHint": "npx",
+        "transport": {
+          "type": "stdio"
+        },
+        "packageArguments": [
+          {
+            "type": "named",
+            "name": "--figma-api-key",
+            "description": "Your Figma personal access token",
+            "isRequired": true,
+            "isSecret": true
+          },
+          {
+            "type": "named",
+            "name": "--stdio",
+            "value": "",
+            "description": "Use stdio transport"
+          }
+        ]
+      }
+    ]
+  },
+  "_meta": {}
+}

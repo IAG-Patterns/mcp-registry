@@ -7,7 +7,7 @@ A static MCP (Model Context Protocol) registry hosted on GitHub Pages, compatibl
 | Server | Type | Transport | Source |
 |--------|------|-----------|--------|
 | **Playwright MCP** | Local (npm) | stdio | `@playwright/mcp` via npx |
-| **Figma MCP Server** | Remote | streamable-http | `https://mcp.figma.com/mcp` |
+| **Framelink MCP for Figma** | Local (npm) | stdio | `figma-developer-mcp` via npx |
 | **MCP Atlassian** | Local (pypi) | stdio | `mcp-atlassian` via uvx |
 | **Memory Server** | Local (npm) | stdio | `@modelcontextprotocol/server-memory` via npx |
 | **Sequential Thinking** | Local (npm) | stdio | `@modelcontextprotocol/server-sequential-thinking` via npx |

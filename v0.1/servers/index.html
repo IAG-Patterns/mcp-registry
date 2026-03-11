@@ -27,15 +27,26 @@
     {
       "server": {
         "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-        "name": "com.figma/mcp",
-        "title": "Figma MCP Server",
-        "description": "Brings Figma design context directly into your AI workflow for code generation.",
-        "version": "1.0.0",
-        "websiteUrl": "https://developers.figma.com/docs/figma-mcp-server/",
-        "remotes": [
+        "name": "ai.framelink/figma-developer-mcp",
+        "title": "Framelink MCP for Figma",
+        "description": "Give your coding agent access to Figma data - implement designs in one-shot.",
+        "version": "0.6.6",
+        "repository": {
+          "url": "https://github.com/GLips/Figma-Context-MCP",
+          "source": "github"
+        },
+        "websiteUrl": "https://www.framelink.ai",
+        "packages": [
           {
-            "type": "streamable-http",
-            "url": "https://mcp.figma.com/mcp"
+            "registryType": "npm",
+            "identifier": "figma-developer-mcp",
+            "version": "0.6.6",
+            "runtimeHint": "npx",
+            "transport": { "type": "stdio" },
+            "packageArguments": [
+              { "type": "named", "name": "--figma-api-key", "description": "Your Figma personal access token", "isRequired": true, "isSecret": true },
+              { "type": "named", "name": "--stdio", "value": "", "description": "Use stdio transport" }
+            ]
           }
         ]
       },
