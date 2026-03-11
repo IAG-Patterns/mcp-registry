@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCP Registry — IAG-Patterns</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #e6edf3; min-height: 100vh; display: flex; justify-content: center; padding: 3rem 1.5rem; }
+    .container { max-width: 720px; width: 100%; }
+    h1 { font-size: 1.75rem; font-weight: 600; margin-bottom: .25rem; }
+    .subtitle { color: #8b949e; margin-bottom: 2rem; }
+    .badge { display: inline-block; background: #238636; color: #fff; font-size: .75rem; padding: 2px 8px; border-radius: 12px; margin-left: .5rem; vertical-align: middle; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; margin-bottom: .75rem; padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; transition: border-color .15s; }
+    .card:hover { border-color: #58a6ff; }
+    .card-title { font-weight: 600; font-size: .95rem; }
+    .card-desc { color: #8b949e; font-size: .8rem; margin-top: .2rem; }
+    .card-tag { font-size: .7rem; padding: 2px 8px; border-radius: 12px; border: 1px solid #30363d; color: #8b949e; white-space: nowrap; }
+    .card-tag.local { border-color: #3fb950; color: #3fb950; }
+    .card-tag.remote { border-color: #58a6ff; color: #58a6ff; }
+    .section-title { font-size: .85rem; color: #8b949e; text-transform: uppercase; letter-spacing: .05em; margin: 2rem 0 .75rem; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .endpoints { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1rem 1.25rem; font-family: 'SFMono-Regular', Consolas, monospace; font-size: .8rem; line-height: 1.8; overflow-x: auto; }
+    .method { color: #3fb950; font-weight: 600; }
+    .url { color: #e6edf3; }
+    .footer { margin-top: 3rem; color: #484f58; font-size: .75rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>MCP Registry <span class="badge">v0.1</span></h1>
+    <p class="subtitle">Static Model Context Protocol registry for GitHub Copilot</p>
+
+    <p class="section-title">Registered Servers</p>
+
+    <div class="card">
+      <div><div class="card-title">Playwright MCP</div><div class="card-desc">Browser automation via accessibility trees — @playwright/mcp</div></div>
+      <span class="card-tag local">stdio</span>
+    </div>
+    <div class="card">
+      <div><div class="card-title">Figma MCP Server</div><div class="card-desc">Design context for AI code generation — mcp.figma.com</div></div>
+      <span class="card-tag remote">remote</span>
+    </div>
+    <div class="card">
+      <div><div class="card-title">MCP Atlassian</div><div class="card-desc">Jira &amp; Confluence integration — mcp-atlassian via uvx</div></div>
+      <span class="card-tag local">stdio</span>
+    </div>
+    <div class="card">
+      <div><div class="card-title">Memory Server</div><div class="card-desc">Persistent knowledge graph — @modelcontextprotocol/server-memory</div></div>
+      <span class="card-tag local">stdio</span>
+    </div>
+    <div class="card">
+      <div><div class="card-title">Sequential Thinking</div><div class="card-desc">Step-by-step problem solving with revision — @modelcontextprotocol/server-sequential-thinking</div></div>
+      <span class="card-tag local">stdio</span>
+    </div>
+    <div class="card">
+      <div><div class="card-title">GitHub MCP Server</div><div class="card-desc">Repos, issues, PRs &amp; workflows — api.githubcopilot.com</div></div>
+      <span class="card-tag remote">remote</span>
+    </div>
+
+    <p class="section-title">API Endpoints</p>
+    <div class="endpoints">
+      <span class="method">GET</span> <a class="url" href="v0.1/servers/">/v0.1/servers</a><br>
+      <span class="method">GET</span> <span class="url">/v0.1/servers/{name}/versions/latest</span><br>
+      <span class="method">GET</span> <span class="url">/v0.1/servers/{name}/versions/{version}</span>
+    </div>
+
+    <p class="section-title">Usage</p>
+    <div class="endpoints">
+      Registry URL: <span style="color:#3fb950">https://iag-patterns.github.io/mcp-registry</span>
+    </div>
+
+    <div class="footer">
+      <a href="https://github.com/IAG-Patterns/mcp-registry">Source on GitHub</a> · Powered by GitHub Pages
+    </div>
+  </div>
+</body>
+</html>
