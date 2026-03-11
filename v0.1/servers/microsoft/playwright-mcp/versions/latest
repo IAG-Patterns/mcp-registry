@@ -1,0 +1,26 @@
+{
+  "server": {
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "microsoft/playwright-mcp",
+    "title": "Playwright MCP",
+    "description": "Automate web browsers using accessibility trees for testing and data extraction.",
+    "version": "0.0.68",
+    "repository": {
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "source": "github"
+    },
+    "websiteUrl": "https://github.com/microsoft/playwright-mcp",
+    "packages": [
+      {
+        "registryType": "npm",
+        "identifier": "@playwright/mcp",
+        "version": "0.0.68",
+        "runtimeHint": "npx",
+        "transport": {
+          "type": "stdio"
+        }
+      }
+    ]
+  },
+  "_meta": {}
+}

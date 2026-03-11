@@ -1,0 +1,21 @@
+{
+  "server": {
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "github/github-mcp-server",
+    "title": "GitHub MCP Server",
+    "description": "Connect AI assistants to GitHub - manage repos, issues, PRs, and workflows.",
+    "version": "1.0.0",
+    "repository": {
+      "url": "https://github.com/github/github-mcp-server",
+      "source": "github"
+    },
+    "websiteUrl": "https://github.com/github/github-mcp-server",
+    "remotes": [
+      {
+        "type": "streamable-http",
+        "url": "https://api.githubcopilot.com/mcp/"
+      }
+    ]
+  },
+  "_meta": {}
+}

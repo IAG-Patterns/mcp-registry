@@ -1,0 +1,57 @@
+{
+  "server": {
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "sooperset/mcp-atlassian",
+    "title": "MCP Atlassian",
+    "description": "AI assistant integration with Atlassian Jira and Confluence for issue and doc management.",
+    "version": "1.0.0",
+    "repository": {
+      "url": "https://github.com/sooperset/mcp-atlassian",
+      "source": "github"
+    },
+    "websiteUrl": "https://github.com/sooperset/mcp-atlassian",
+    "packages": [
+      {
+        "registryType": "pypi",
+        "identifier": "mcp-atlassian",
+        "version": "1.0.0",
+        "runtimeHint": "uvx",
+        "transport": {
+          "type": "stdio"
+        },
+        "environmentVariables": [
+          {
+            "name": "JIRA_URL",
+            "description": "Your Jira instance URL (e.g. https://your-domain.atlassian.net)",
+            "isRequired": true
+          },
+          {
+            "name": "JIRA_USERNAME",
+            "description": "Your Jira username or email",
+            "isRequired": true
+          },
+          {
+            "name": "JIRA_API_TOKEN",
+            "description": "Your Jira API token",
+            "isRequired": true,
+            "isSecret": true
+          },
+          {
+            "name": "CONFLUENCE_URL",
+            "description": "Your Confluence instance URL"
+          },
+          {
+            "name": "CONFLUENCE_USERNAME",
+            "description": "Your Confluence username or email"
+          },
+          {
+            "name": "CONFLUENCE_API_TOKEN",
+            "description": "Your Confluence API token",
+            "isSecret": true
+          }
+        ]
+      }
+    ]
+  },
+  "_meta": {}
+}

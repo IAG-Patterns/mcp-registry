@@ -1,0 +1,17 @@
+{
+  "server": {
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "com.figma/mcp",
+    "title": "Figma MCP Server",
+    "description": "Brings Figma design context directly into your AI workflow for code generation.",
+    "version": "1.0.0",
+    "websiteUrl": "https://developers.figma.com/docs/figma-mcp-server/",
+    "remotes": [
+      {
+        "type": "streamable-http",
+        "url": "https://mcp.figma.com/mcp"
+      }
+    ]
+  },
+  "_meta": {}
+}

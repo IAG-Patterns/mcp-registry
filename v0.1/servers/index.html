@@ -1,0 +1,151 @@
+{
+  "servers": [
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "microsoft/playwright-mcp",
+        "title": "Playwright MCP",
+        "description": "Automate web browsers using accessibility trees for testing and data extraction.",
+        "version": "0.0.68",
+        "repository": {
+          "url": "https://github.com/microsoft/playwright-mcp",
+          "source": "github"
+        },
+        "websiteUrl": "https://github.com/microsoft/playwright-mcp",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "@playwright/mcp",
+            "version": "0.0.68",
+            "runtimeHint": "npx",
+            "transport": { "type": "stdio" }
+          }
+        ]
+      },
+      "_meta": {}
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "com.figma/mcp",
+        "title": "Figma MCP Server",
+        "description": "Brings Figma design context directly into your AI workflow for code generation.",
+        "version": "1.0.0",
+        "websiteUrl": "https://developers.figma.com/docs/figma-mcp-server/",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://mcp.figma.com/mcp"
+          }
+        ]
+      },
+      "_meta": {}
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "sooperset/mcp-atlassian",
+        "title": "MCP Atlassian",
+        "description": "AI assistant integration with Atlassian Jira and Confluence for issue and doc management.",
+        "version": "1.0.0",
+        "repository": {
+          "url": "https://github.com/sooperset/mcp-atlassian",
+          "source": "github"
+        },
+        "websiteUrl": "https://github.com/sooperset/mcp-atlassian",
+        "packages": [
+          {
+            "registryType": "pypi",
+            "identifier": "mcp-atlassian",
+            "version": "1.0.0",
+            "runtimeHint": "uvx",
+            "transport": { "type": "stdio" },
+            "environmentVariables": [
+              { "name": "JIRA_URL", "description": "Your Jira instance URL", "isRequired": true },
+              { "name": "JIRA_USERNAME", "description": "Your Jira username or email", "isRequired": true },
+              { "name": "JIRA_API_TOKEN", "description": "Your Jira API token", "isRequired": true, "isSecret": true },
+              { "name": "CONFLUENCE_URL", "description": "Your Confluence instance URL" },
+              { "name": "CONFLUENCE_USERNAME", "description": "Your Confluence username or email" },
+              { "name": "CONFLUENCE_API_TOKEN", "description": "Your Confluence API token", "isSecret": true }
+            ]
+          }
+        ]
+      },
+      "_meta": {}
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "modelcontextprotocol/server-memory",
+        "title": "Memory Server",
+        "description": "Persistent memory for AI through a knowledge graph of entities and relations.",
+        "version": "2026.1.26",
+        "repository": {
+          "url": "https://github.com/modelcontextprotocol/servers",
+          "source": "github",
+          "subfolder": "src/memory"
+        },
+        "websiteUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "@modelcontextprotocol/server-memory",
+            "version": "2026.1.26",
+            "runtimeHint": "npx",
+            "transport": { "type": "stdio" }
+          }
+        ]
+      },
+      "_meta": {}
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "modelcontextprotocol/server-sequential-thinking",
+        "title": "Sequential Thinking Server",
+        "description": "Structured problem-solving through step-by-step thinking with revision and branching.",
+        "version": "2025.12.18",
+        "repository": {
+          "url": "https://github.com/modelcontextprotocol/servers",
+          "source": "github",
+          "subfolder": "src/sequentialthinking"
+        },
+        "websiteUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "@modelcontextprotocol/server-sequential-thinking",
+            "version": "2025.12.18",
+            "runtimeHint": "npx",
+            "transport": { "type": "stdio" }
+          }
+        ]
+      },
+      "_meta": {}
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "github/github-mcp-server",
+        "title": "GitHub MCP Server",
+        "description": "Connect AI assistants to GitHub - manage repos, issues, PRs, and workflows.",
+        "version": "1.0.0",
+        "repository": {
+          "url": "https://github.com/github/github-mcp-server",
+          "source": "github"
+        },
+        "websiteUrl": "https://github.com/github/github-mcp-server",
+        "remotes": [
+          {
+            "type": "streamable-http",
+            "url": "https://api.githubcopilot.com/mcp/"
+          }
+        ]
+      },
+      "_meta": {}
+    }
+  ],
+  "metadata": {
+    "count": 6
+  }
+}
